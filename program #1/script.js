@@ -4,7 +4,7 @@ const btn = document.querySelector(".btn");
 const lista = document.querySelector("ul");
 //
 btn.addEventListener("click", function () {
-  let pitanje = parseInt(prompt("Unesite određeni broj godina"));
+  let pitanje = Number(prompt("Unesite određeni broj godina"));
   function da() {
     const now = new Date().getFullYear();
     const y = now - pitanje;
@@ -15,7 +15,7 @@ btn.addEventListener("click", function () {
     } else if (pitanje < now && pitanje !== 0) {
       const l = document.createElement("li");
       lista.appendChild(l);
-      l.textContent = `Prije ${pitanje} godina je bila ${y} godina`;
+      l.textContent = `Prije ${pitanje} godina je bila ${y} godina.`;
       l.addEventListener("click", function () {
         l.style.color = "red";
         l.style.textDecoration = "line-through";

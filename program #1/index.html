@@ -7,8 +7,12 @@
     <script src="script.js" defer></script>
     <title>What Year it Was</title>
     <style>
+      ::marker {
+        content: "⏳";
+      }
       body {
         font-family: sans-serif;
+        background-color: antiquewhite;
       }
       .btn {
         font-size: 1.4rem;
@@ -19,7 +23,6 @@
       .btn:hover {
         background-color: rgb(38, 38, 38);
       }
-
       ul {
         display: flex;
         flex-direction: column;
@@ -29,15 +32,14 @@
       ul li {
         font-size: 24px;
         cursor: pointer;
-        align-self: flex-start;
       }
     </style>
   </head>
   <body>
     <section>
       <h2>
-        Ukoliko želiš da znaš prije koliko vremena je bila određena godina
-        <br />klikni na dugme uspod
+        Ukoliko želite da znate prije koliko vremena je bila određena godina
+        <br />kliknite na dugme ispod.
       </h2>
       <button class="btn">Click here</button>
       <ul></ul>
